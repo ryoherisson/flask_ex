@@ -8,3 +8,5 @@ if __name__ == "__main__":
     # InitDB()モジュールを'init_db'という名前で実行できる
     manager.add_command('init_db', InitDB)
     manager.run()
+
+    # python manage.py init_db

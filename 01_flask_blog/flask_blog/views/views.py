@@ -8,13 +8,6 @@ from flask import url_for
 
 from flask_blog import app
 
-@app.route('/')
-def show_entries():
-    if not session.get('logged_in'):
-        return redirect(url_for('login'))
-    # index.htmlでrendering
-    return render_template('entries/index.html')
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
